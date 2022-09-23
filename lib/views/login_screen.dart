@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fingerprint_authentication/utilities/validators.dart';
+import 'package:flutter_fingerprint_authentication/views/register_screen.dart';
 import 'package:flutter_fingerprint_authentication/widgets/app_button.dart';
 import 'package:flutter_fingerprint_authentication/widgets/app_text_field.dart';
 import 'package:flutter_fingerprint_authentication/widgets/password_text_field.dart';
@@ -36,18 +37,52 @@ class LoginScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             children: [
               // ===============================================================
-              // Sign in text
+              // Welcome Text
               // ===============================================================
               const Text(
-                'Sign in now',
-                textAlign: TextAlign.center,
+                'Biometric Authentication',
                 style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 28,
-                    fontWeight: FontWeight.w600),
+                  color: Color(0xff303450),
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
               const SizedBox(
                 height: 32,
+              ),
+              // ===============================================================
+              // Sign in text
+              // ===============================================================
+              const Text(
+                'Login now',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 28,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(
+                height: 4,
+              ),
+              // ===============================================================
+              // Don't have an account
+              // ===============================================================
+              Align(
+                alignment: Alignment.centerLeft,
+                child: TextButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RegisterScreen(),
+                    ),
+                  ),
+                  child: const Text(
+                    'Don\'t have an account? Click here',
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 12,
               ),
               // =================================================================
               // Email Text Field

@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_fingerprint_authentication/views/login_screen.dart';
-import 'package:flutter_fingerprint_authentication/views/register_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,17 +13,17 @@ class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
   navigateToHome() {
     // ===============================================================================
-    // Timer is used so that after 3 seconds the user is navigated to login screen
+    // Timer is used so that after 2 seconds the user is navigated to login screen
     // ===============================================================================
     Timer(
       //Duration of timer
-      const Duration(seconds: 3),
+      const Duration(seconds: 2),
       // function (what happens after the timer stops)
       () {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => RegisterScreen(),
+            builder: (context) => LoginScreen(),
           ),
         );
       },
@@ -50,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen>
             Hero(
               tag: 'logo',
               child: Image.asset(
-                'images/logo.png',
+                'images/touch_ID.png',
                 width: MediaQuery.of(context).size.width * 0.5,
               ),
             ),

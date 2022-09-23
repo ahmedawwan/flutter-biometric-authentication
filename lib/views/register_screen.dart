@@ -40,18 +40,45 @@ class RegisterScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             children: [
               // ===============================================================
+              // Welcome Text
+              // ===============================================================
+               const Text(
+                'Biometric Authentication',
+                style: TextStyle(
+                  color: Color(0xff303450),
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+              const SizedBox(
+                height: 32,
+              ),
+              // ===============================================================
               // Sign in text
               // ===============================================================
               const Text(
                 'Register now',
-                textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 28,
-                    fontWeight: FontWeight.w600),
+                  color: Colors.black,
+                  fontSize: 28,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               const SizedBox(
-                height: 32,
+                height: 4,
+              ),
+              // ===============================================================
+              // Already have an account
+              // ===============================================================
+              Align(
+                alignment: Alignment.centerLeft,
+                child: TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text('Already have an account? Sign in'),
+                ),
+              ),
+              const SizedBox(
+                height: 12,
               ),
               // ===============================================================
               // Name text field

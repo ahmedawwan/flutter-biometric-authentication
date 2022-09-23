@@ -51,4 +51,7 @@ macos/
 web/
 windows/
 
+#files to ignore
+GoogleService-Info.plist
+
 
