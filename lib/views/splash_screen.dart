@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_fingerprint_authentication/views/home_screen.dart';
 import 'package:flutter_fingerprint_authentication/views/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,6 +14,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
   navigateToHome() {
+    FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+
     // ===============================================================================
     // Timer is used so that after 2 seconds the user is navigated to login screen
     // ===============================================================================
@@ -23,7 +27,9 @@ class _SplashScreenState extends State<SplashScreen>
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => LoginScreen(),
+            builder: (context) => firebaseAuth.currentUser == null
+                ? LoginScreen()
+                : const HomeScreen(),
           ),
         );
       },
