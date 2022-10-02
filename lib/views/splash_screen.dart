@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
           context,
           MaterialPageRoute(
             builder: (context) => firebaseAuth.currentUser == null
-                ? LoginScreen()
+                ? const LoginScreen()
                 : const HomeScreen(),
           ),
         );

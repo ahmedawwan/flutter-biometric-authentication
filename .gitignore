@@ -53,5 +53,6 @@ windows/
 
 #files to ignore
 GoogleService-Info.plist
+google-services.json
 
 

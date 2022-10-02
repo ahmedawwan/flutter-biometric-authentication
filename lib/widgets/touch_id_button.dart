@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fingerprint_authentication/Controllers/authentication_controller.dart';
 
 class TouchIDButton extends StatelessWidget {
   const TouchIDButton({super.key});
 
+
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: AuthenticationController().authenticateUserWithTouchID,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -7,6 +7,7 @@ import 'package:flutter_fingerprint_authentication/widgets/app_button.dart';
 import 'package:flutter_fingerprint_authentication/widgets/app_text_field.dart';
 import 'package:flutter_fingerprint_authentication/widgets/password_text_field.dart';
 import 'package:flutter_fingerprint_authentication/widgets/touch_id_button.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
