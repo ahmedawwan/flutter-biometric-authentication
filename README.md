@@ -94,6 +94,8 @@ Future<void> _saveUser(String email, String password) async {
 }
 ```
 
+---
+
 ## Logging in the user using touch ID
 
 I’ll be using firebase for authentication but you can use any Authentication provider of your choice.
