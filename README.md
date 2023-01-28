@@ -1,4 +1,4 @@
-# flutter_fingerprint_authentication
+# flutter_biometric_authentication
 
 Basically the idea is to store the user login information upon registration or login in a `secure storage`, and whenever the session expires or user logs out, we can access that information using local authentication and authenticate the user to the server.
 
